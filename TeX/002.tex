@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{forloop}
+\usepackage{intcalc} % to use modulo
+\begin{document}
+	\newcounter{a}
+	\newcounter{b}
+	\newcounter{c}
+	\newcounter{sum}
+	\setcounter{a}{1}
+	\setcounter{b}{1}
+	\setcounter{sum}{0}
+	\whiledo{\value{c}<4000000}{
+		\setcounter{c}{0}
+		\addtocounter{c}{\value{a}}
+		\addtocounter{c}{\value{b}}
+		\setcounter{a}{\value{b}}
+		\setcounter{b}{\value{c}}
+		%\arabic{c}
+		\ifthenelse{\intcalcMod{\value{c}}{2}=0}{
+			\addtocounter{sum}{\value{c}}
+		}{}
+	}
+	\arabic{sum}
+\end{document}
