@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{forloop}
+\begin{document}
+
+	\newcounter{n}
+	\newcounter{isthree}
+	\newcounter{isfive}
+	\newcounter{sum}
+	\setcounter{isthree}{0}
+	\setcounter{isfive}{0}
+	\setcounter{sum}{0}
+	\forloop{n}{1}{\value{n}<1000}{
+		\addtocounter{isthree}{1}
+		\addtocounter{isfive}{1}
+		\ifthenelse{\value{isthree}=3}{
+			\addtocounter{isthree}{-3}
+			\addtocounter{sum}{\value{n}}
+		}{}
+		\ifthenelse{\value{isfive}=5}{
+			\addtocounter{isfive}{-5}
+			\addtocounter{sum}{\value{n}}
+		}{}
+		\ifthenelse{\value{isthree}=0}{
+			\ifthenelse{\value{isfive}=0}{
+				\addtocounter{sum}{-\value{n}}
+			}{}
+		}{}
+		%\arabic{isthree}
+		%\arabic{isfive}
+		
+	}
+	\arabic{sum}
+	
+\end{document}
