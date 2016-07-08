@@ -10,6 +10,10 @@ I think it is good way to learn new language!
 
 ## Basic Instructions for Novices
 
+### Editor
+
+I recommend [Notepad++](https://notepad-plus-plus.org)
+
 ### Compiling C++
 
 * Install [MinGW](http://mingw.org/)

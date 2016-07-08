@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{forloop}
+\begin{document}
+	\newcounter{n}
+	\newcounter{sumsq}
+	\newcounter{sum}
+	\setcounter{sumsq}{0}
+	\setcounter{sum}{0}
+	\newcounter{temp}
+	\forloop{n}{1}{\value{n}<101}{
+		\setcounter{temp}{\value{n}*\value{n}}
+		\addtocounter{sumsq}{\value{temp}}
+		\addtocounter{sum}{\value{n}}
+	}
+	\newcounter{ans}
+	\setcounter{temp}{\value{sum}*\value{sum}}
+	\addtocounter{ans}{\value{temp}-\value{sumsq}}
+	\arabic{ans}
+	
+\end{document}
