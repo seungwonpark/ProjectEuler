@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{forloop}
+\usepackage{intcalc} % to use modulo
+\begin{document}
+	\newcounter{i}
+	\newcounter{j}
+	\newcounter{temp}
+	\newcounter{comp}
+	\newcounter{make}
+	\newcounter{ans}
+	\setcounter{ans}{0}
+	\newcounter{ttemp}
+	\forloop{i}{100}{\value{i}<1000}{
+		\forloop{j}{100}{\value{j}<1000}{
+			\setcounter{temp}{\value{i}*\value{j}}
+			\setcounter{comp}{\value{temp}}
+			\setcounter{make}{0}
+			\whiledo{\value{temp}>0}{
+				\addtocounter{make}{\intcalcMod{\value{temp}}{10}}
+				\setcounter{make}{\value{make}*10}
+				\setcounter{temp}{\value{temp}/10}
+			}
+			\setcounter{make}{\value{make}/10}
+			\ifthenelse{\value{comp}=\value{make}}{
+				\ifthenelse{\value{comp}>\value{ans}}{
+					\setcounter{ans}{\value{comp}}
+				}{}
+			}{}
+		}
+	}
+	\arabic{ans}
+\end{document}
