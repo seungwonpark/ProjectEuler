@@ -1,12 +1,12 @@
 # ProjectEuler
 
-- Languages : C++, Python, **TeX**
-
-----------
-
 My solution to [ProjectEuler](https://projecteuler.net/)
 
 I think it is good way to learn new language!
+
+- Languages : C++, Python, **TeX**, PHP
+
+----------
 
 ## Basic Instructions for Novices
 
@@ -29,6 +29,13 @@ I recommend [Notepad++](https://notepad-plus-plus.org)
 
 ### Compiling TeX
 
-* Download latest [TeXlive](https://www.tug.org/texlive/acquire-iso.html) via torrent
+* Download latest [TeXlive](https://www.tug.org/texlive/acquire-iso.html) via torrent [Guide in Korean](https://github.com/gshslatexintro/An-Introduction-to-LaTeX/blob/master/Installation.md)
 * To install TeXlive, unzip the iso file and execute `install-tl-windows.bat`
 * `pdflatex xxx.tex`
+
+### Interpreting PHP
+
+* Install [MAMP](https://www.mamp.info)
+* Execute MAMP
+* Preferences - Web Server - Document root (Select)
+* Go to localhost:xx/xxx.php at your web browser
