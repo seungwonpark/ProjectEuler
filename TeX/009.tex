@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{forloop}
+\begin{document}
+	\newcounter{i}
+	\newcounter{j}
+	\newcounter{temp}
+	\newcounter{ans}
+	\newcounter{tempa}
+	\newcounter{tempb}
+	\newcounter{tempc}
+	\forloop{j}{1}{\value{j}<500}{
+		\forloop{i}{1}{\value{i}<\value{j}}{
+			\setcounter{temp}{1000-\value{i}-\value{j}}
+			\setcounter{tempa}{\value{i}*\value{i}}
+			\setcounter{tempb}{\value{j}*\value{j}}
+			\setcounter{tempc}{\value{temp}*\value{temp}}
+			\addtocounter{tempa}{\value{tempb}}
+			\ifthenelse{\value{tempa}=\value{tempc}}{
+				\setcounter{ans}{\value{i}*\value{j}*\value{temp}}
+				\arabic{ans}
+			}{}
+		}
+	}
+\end{document}
