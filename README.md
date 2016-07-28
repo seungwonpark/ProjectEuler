@@ -4,7 +4,7 @@ My solution to [ProjectEuler](https://projecteuler.net/)
 
 I think it is good way to learn new language!
 
-- Languages : C++, Python, **TeX**, PHP
+- Languages : C++, Python, **TeX**, PHP, Javascript
 
 ----------
 
@@ -33,9 +33,14 @@ I recommend [Notepad++](https://notepad-plus-plus.org)
 * To install TeXlive, unzip the iso file and execute `install-tl-windows.bat`
 * `pdflatex xxx.tex`
 
-### Interpreting PHP
+### Interpreting PHP (locally)
 
 * Install [MAMP](https://www.mamp.info)
 * Execute MAMP
 * Preferences - Web Server - Document root (Select)
 * Go to localhost:xx/xxx.php at your web browser
+
+### Interpreting Javascript (locally)
+
+* Install [Node.js](https://nodejs.org)
+* `node xxx.js`
